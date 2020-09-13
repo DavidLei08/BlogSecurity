@@ -1,8 +1,11 @@
 # tomcat configuration
 server:
-    port: 8080
-    servlet :
-      context-path:
+  port: 8080
+  servlet:
+    session:
+      timeout: 300m # session会话超时时间，默认情况 下是30分钟（m）,不能小于1分钟
+      cookie:
+        name: JSESSIONID # 指定浏览器Cookie中关于SessionID保存的那个名称
 
 
 
